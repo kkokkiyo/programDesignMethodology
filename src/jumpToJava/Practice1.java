@@ -1,4 +1,4 @@
-package Practice1;
+package jumpToJava;
 // 점프 투 자바 연습문제 연습 메소드들
 
 import java.util.*;
@@ -26,11 +26,10 @@ public class Practice1 {
     // @param arr - 정수인 숫자를 받아서
     // @return - 이 숫자의 짝수 홀수 여부를 판단하여 반환
     public boolean oddeven(int a){
-        if (a % 2 == 0){
+        if (a % 2 == 0)
             return true; //짝수
-        }else {
+        else
             return false; //홀수
-        }
     }
 
 
@@ -67,7 +66,7 @@ public class Practice1 {
         return b;
     }
 
-     //완전 틀림
+    //완전 틀림
     public void removePractice(){
         HashMap<String, Integer> grade = new HashMap<>();
         grade.put("A", 90);
@@ -78,7 +77,7 @@ public class Practice1 {
         System.out.println(grade);  // {A=90, C=70} 출력
     }
 
-     //완전 틀림
+    //완전 틀림
     public void retainAllPractice(){
         ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5));
         HashSet<Integer> temp = new HashSet(numbers);  // List를 Set으로 변경
@@ -92,7 +91,7 @@ public class Practice1 {
         CAFE_LATTE
     };
 
-    static void printCoffeePrice(CoffeeType type) {
+    public void printCoffeePrice(CoffeeType type) {
         HashMap<CoffeeType, Integer> priceMap = new HashMap<>();
         priceMap.put(CoffeeType.AMERICANO, 3000);  // 1: 아메리카노
         priceMap.put(CoffeeType.ICE_AMERICANO, 4000);  // 2: 아이스 아메리카노
@@ -100,25 +99,6 @@ public class Practice1 {
         int price = priceMap.get(type);
         System.out.println(String.format("가격은 %d원 입니다.", price));
     }
-
-
-public static void main(String[] args) {
-        Practice1 practice1 = new Practice1();
-        System.out.println(practice1.average(80, 75, 55));
-        System.out.println(practice1.average1(new int[]{80, 75, 55}));
-        System.out.println(practice1.oddeven(13));
-        System.out.println(practice1.oddEvenApplication(13));
-        System.out.println(practice1.localSeparator("881120-1068234"));
-        System.out.println(practice1.sexDistinction("881120-1068234"));
-        System.out.println(practice1.replace("a:b:c:d"));
-        System.out.println(practice1.sortedList(new ArrayList<>(Arrays.asList(1, 3, 5, 4, 2))));
-        System.out.println(practice1.joinPractice(new ArrayList<>(Arrays.asList("a", "b", "c", "d"))));
-        practice1.removePractice();
-        practice1.retainAllPractice();
-        printCoffeePrice(CoffeeType.AMERICANO);
-        printCoffeePrice(CoffeeType.ICE_AMERICANO);
-}
-
 
 
 
